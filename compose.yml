@@ -10,5 +10,6 @@ services:
       - /app/node_modules
       - /app/.next
     environment:
-      - WATCHPACK_POLLING=true
-    command: npm run dev
+      WATCHPACK_POLLING: "true"
+      WATCHPACK_POLLING_INTERVAL: "1000"
+    command: npm run dev -- --hostname 0.0.0.0
